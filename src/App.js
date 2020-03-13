@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import { getPopularMoviesByYear } from './api';
+import MovieListPage from './pages/MovieListPage';
+import MovieDetailsPage from './pages/MovieDetailsPage';
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState();
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
+
+  const history = useHistory();
+
+  const handleClickDetails = movie => {
+    history.push(`/movie/${movie.id}`);
+    setSelectedMovie(movie);
+  };
+
+  const handleClickFavorite = (favorites, movie) => {
+    const isFav = favoriteMovies.includes(movie.id);
+    setFavoriteMovies(
+      isFav
+        ? favoriteMovies.filter(m => m.id === movie.id)
+        : [...favoriteMovies, movie.id]
+    );
+  };
+
+  useEffect(() => {
+    getPopularMoviesByYear(2016).then(res => setMovies(res));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route path='/movie/:id'>
+          <MovieDetailsPage
+            onFavorite={handleClickFavorite}
+            movie={selectedMovie}
+            favorites={favoriteMovies}
+          />
+        </Route>
+        <Route path='/'>
+          <MovieListPage
+            favorites={favoriteMovies}
+            onClickDetails={handleClickDetails}
+            movies={movies}
+          />
+        </Route>
+      </Switch>
     </div>
   );
 }
