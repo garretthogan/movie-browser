@@ -5,6 +5,7 @@ import Score from './Score';
 import Star from './Icons/Star';
 
 function MovieListItem({ movie, favorites, onClickDetails }) {
+  const isFavorite = favorites.includes(movie.id);
   return (
     <Card
       sx={{
@@ -17,7 +18,7 @@ function MovieListItem({ movie, favorites, onClickDetails }) {
       <Box pb={2}>
         <Text fontSize={[2, 3, 4]}>
           {movie.title}
-          <Star color='#808080' isFilled={favorites.includes(movie.id)} />
+          {isFavorite && <Star color='yellow' isFilled={isFavorite} />}
         </Text>
       </Box>
       <Flex>

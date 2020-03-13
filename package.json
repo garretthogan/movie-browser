@@ -1,6 +1,7 @@
 {
   "name": "movie-browser",
   "version": "0.1.0",
+  "homepage": "https://garretthogan.github.io/movie-browser",
   "private": true,
   "dependencies": {
     "@rebass/preset": "^4.0.5",
@@ -19,7 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

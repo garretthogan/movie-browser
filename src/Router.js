@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 function Router({ children }) {
-  return <BrowserRouter>{children}</BrowserRouter>;
+  return <HashRouter>{children}</HashRouter>;
 }
 
 export default Router;
