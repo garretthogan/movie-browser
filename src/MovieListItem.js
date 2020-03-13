@@ -18,7 +18,7 @@ function MovieListItem({ movie, favorites, onClickDetails }) {
       <Box pb={2}>
         <Text fontSize={[2, 3, 4]}>
           {movie.title}
-          {isFavorite && <Star color='yellow' isFilled={isFavorite} />}
+          {isFavorite && <Star color='#FFD700' isFilled={isFavorite} />}
         </Text>
       </Box>
       <Flex>

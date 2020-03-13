@@ -6,7 +6,7 @@ function Star({ color, isFilled, onClick }) {
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
-        fill={isFilled ? 'yellow' : 'none'}
+        fill={isFilled ? '#FFD700' : 'none'}
         stroke={color}
         strokeWidth='2'
         strokeLinecap='round'
