@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/garretthogan.github.io/movie-browser/static/css/main.f7c2150c.chunk.css",
+    "main.js": "/garretthogan.github.io/movie-browser/static/js/main.2c17ad24.chunk.js",
+    "main.js.map": "/garretthogan.github.io/movie-browser/static/js/main.2c17ad24.chunk.js.map",
+    "runtime-main.js": "/garretthogan.github.io/movie-browser/static/js/runtime-main.01d9f169.js",
+    "runtime-main.js.map": "/garretthogan.github.io/movie-browser/static/js/runtime-main.01d9f169.js.map",
+    "static/js/2.ee676c55.chunk.js": "/garretthogan.github.io/movie-browser/static/js/2.ee676c55.chunk.js",
+    "static/js/2.ee676c55.chunk.js.map": "/garretthogan.github.io/movie-browser/static/js/2.ee676c55.chunk.js.map",
+    "index.html": "/garretthogan.github.io/movie-browser/index.html",
+    "precache-manifest.28d2fdb2f201f2980274fbd015f97882.js": "/garretthogan.github.io/movie-browser/precache-manifest.28d2fdb2f201f2980274fbd015f97882.js",
+    "service-worker.js": "/garretthogan.github.io/movie-browser/service-worker.js",
+    "static/css/main.f7c2150c.chunk.css.map": "/garretthogan.github.io/movie-browser/static/css/main.f7c2150c.chunk.css.map",
+    "static/js/2.ee676c55.chunk.js.LICENSE.txt": "/garretthogan.github.io/movie-browser/static/js/2.ee676c55.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01d9f169.js",
+    "static/js/2.ee676c55.chunk.js",
+    "static/css/main.f7c2150c.chunk.css",
+    "static/js/main.2c17ad24.chunk.js"
+  ]
+}
